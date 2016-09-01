@@ -1,3 +1,5 @@
 .publish
 public/.DS_Store
 .powder
+node_modules/
+.git/

@@ -8,6 +8,7 @@
     "gulp-concat": "*",
     "gulp-connect": "^4.1.0",
     "gulp-css-globbing": "*",
+    "gulp-file-include": "^0.14.0",
     "gulp-filter": "^4.0.0",
     "gulp-flatten": "*",
     "gulp-imagemin": "*",
