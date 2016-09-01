@@ -1,0 +1,92 @@
+// Default button styling
+
+.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+  display: inline-block;
+  padding: 0 3rem;
+  color: $white;
+  background-color: $highlight;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 4px;
+  border: 1px solid $highlight;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  transition: $transition;
+
+  &:hover{
+    color: $white;
+    background-color: $highlight-l;
+    border: 1px solid $highlight-l;
+  }
+
+  &:active{
+    color: $white;
+    background-color: $highlight-d;
+    border: 1px solid $highlight-d;
+    transform: translateY(3px);
+    &:hover{
+      color: $white;
+      background-color: $highlight;
+      border: 1px solid $highlight;
+    }
+  }
+
+  &.hollow{
+    color: $highlight;
+    background-color: transparent;
+
+    &:hover{
+      color: $white;
+      background-color: transparentize($highlight, .5);
+    }
+
+    &:focus{
+      color: $white;
+      background-color: transparentize($highlight, .5);
+      transform: translateY(3px);
+    }
+  }
+
+  &.disabled{
+    opacity: .5;
+    &:hover{
+      color: $white;
+      background-color: $highlight;
+      border: 1px solid $highlight;
+    }
+  }
+
+}
+
+
+.arrow{
+  text-indent: -9999px;
+  position: relative;
+  &:after{
+    top: 0;
+    left: 0;
+    content:"";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url("../img/sprite.stack.svg#arrow");
+    background-size: 3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &.prev{
+    &:after{
+      transform: rotate(180deg);
+    }
+  }
+}
